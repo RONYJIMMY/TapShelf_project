@@ -1,0 +1,34 @@
+export const FETCH_INVENTORY_INIT_ACTION = "FETCH_INVENTORY_INIT_ACTION";
+export const FETCH_INVENTORY_SUCCESS_ACTION =
+  FETCH_INVENTORY_INIT_ACTION + "_SUCCESS";
+export const FETCH_INVENTORY_FAIL_ACTION = FETCH_INVENTORY_INIT_ACTION + "_ERROR";
+
+export const ADD_INVENTORY_INIT_ACTION = "ADD_INVENTORY_INIT_ACTION";
+export const ADD_INVENTORY_SUCCESS_ACTION = ADD_INVENTORY_INIT_ACTION + "_SUCCESS";
+export const ADD_INVENTORY_FAIL_ACTION = ADD_INVENTORY_INIT_ACTION + "_ERROR";
+
+export const DELETE_INVENTORY_INIT_ACTION = "DELETE_INVENTORY_INIT_ACTION";
+export const DELETE_INVENTORY_SUCCESS_ACTION =
+  DELETE_INVENTORY_INIT_ACTION + "_SUCCESS";
+export const DELETE_INVENTORY_FAIL_ACTION = DELETE_INVENTORY_INIT_ACTION + "_ERROR";
+
+export function fetchInventory() {
+  return {
+    type: FETCH_INVENTORY_INIT_ACTION,
+  };
+}
+
+export function AddInventory(value, names) {
+  return {
+    type: ADD_INVENTORY_INIT_ACTION,
+    value: value,
+    names: names,
+  };
+}
+
+export function DeleteInventory(value) {
+  return {
+    type: DELETE_INVENTORY_INIT_ACTION,
+    value: value,
+  };
+}
